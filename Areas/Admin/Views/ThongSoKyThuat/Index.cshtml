@@ -1,0 +1,52 @@
+﻿@model IEnumerable< Shopping_Tutorial.Models.ThongSoKyThuatModel>
+
+@{
+    ViewData["Title"] = "Danh sách thông số kỹ thuật";
+}
+
+<h3>Danh sách thông số kỹ thuật</h3>
+<a asp-action="Create" asp-controller="ThongSoKyThuat" class="btn btn-success mb-2">Thêm thông số</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Sản phẩm</th>
+            <th>Camera</th>
+            <th>CPU</th>
+            <th>RAM</th>
+            <th>Chip</th>
+            <th>Pin</th>
+            <th>Màn hình</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Product?.Name</td>
+                <td>@item.Camera</td>
+                <td>@item.CPU</td>
+                <td>@item.RAM</td>
+                <td>@item.Chip</td>
+                <td>@item.Pin</td>
+                <td>@item.Screen</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm confirmDeletion">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).on("click", "a.confirmDeletion", function (event) {
+        if (!confirm("Bạn có chắc muốn xoá thông số này?")) {
+            event.preventDefault();
+        }
+    });
+</script>

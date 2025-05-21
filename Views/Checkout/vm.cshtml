@@ -1,0 +1,29 @@
+﻿@model Shopping_Tutorial.Models.Momo.MomoExecuteResponseModel
+@{
+    ViewBag.Title = "Kết quả thanh toán Momo";
+}
+
+<h2>Kết quả thanh toán Momo</h2>
+
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success">@TempData["success"]</div>
+}
+else if (TempData["error"] != null)
+{
+    <div class="alert alert-danger">@TempData["error"]</div>
+}
+
+<table class="table table-bordered mt-3">
+    <tr><th>ResultCode</th><td>@Model.ResultCode</td></tr>
+    <tr><th>Message</th><td>@Model.Message</td></tr>
+    <tr><th>OrderId</th><td>@Model.OrderId</td></tr>
+    <tr><th>Amount</th><td>@Model.Amount</td></tr>
+    <tr><th>OrderInfo</th><td>@Model.OrderInfo</td></tr>
+</table>
+
+<a asp-action="Index" asp-controller="Cart" class="btn btn-primary">Quay lại Giỏ hàng</a>
+@if (Model.ResultCode == 0)
+{
+    <a asp-action="History" asp-controller="Account" class="btn btn-success ml-2">Xem lịch sử đơn</a>
+}

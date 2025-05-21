@@ -1,0 +1,55 @@
+﻿@{
+    var currentUrl = Url.ActionContext.HttpContext.Request.Path;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <h5>Sắp xếp theo</h5>
+            <select class="form-control" id="sort_by">
+                <option value="@currentUrl?sort_by=price_newest">Mới nhất</option>
+                <option  value="@currentUrl?sort_by=price_increase">Giá tăng dần</option>
+                <option value="@currentUrl?sort_by=price_decrease">Giá giảm dần</option>
+                
+                <option value="@currentUrl?sort_by=price_oldest">Cũ nhất</option>
+
+            </select>
+        </div>
+      @*  <div class="col-md-5">
+            <h5>Lọc theo giá</h5>
+            <form asp-action="Index" asp-controller="Category">
+
+                <p>
+                   
+                    <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold;">
+                </p> 
+               
+                <div id="slider-range"></div>
+                <button type="submit" name="locgia" data-current_url="@currentUrl" class="btn btn-danger btn-locgia">Lọc giá</button>
+            </form>
+            
+        </div> *@
+        <div class="col-md-5">
+            <div class="card shadow-sm p-4 rounded-4">
+                <h5 class="mb-3 fw-bold text-primary">Lọc theo giá</h5>
+
+                <form asp-action="Index" asp-controller="Category">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label fw-semibold">Khoảng giá:</label>
+                        <input type="text" id="amount" readonly
+                               class="form-control bg-light border-0 text-primary fw-bold"
+                               style="font-size: 1rem;">
+                    </div>
+
+                    <div id="slider-range" class="mb-4"></div>
+
+                    <button type="submit" name="locgia"
+                            data-current_url="@currentUrl"
+                            class="btn btn-outline-primary w-100 fw-semibold btn-locgia">
+                        <i class="bi bi-filter"></i> Lọc giá
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

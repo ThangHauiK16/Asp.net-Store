@@ -1,0 +1,164 @@
+﻿@* @{
+    ViewData["title"] = "List Compare";
+    var key = 0;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+   
+</head>
+<body>
+    <h3>List Compare</h3>
+
+    
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Product Price</th>
+                <th>Product Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var compare_product in Model)
+            {
+                key++;
+                <tr>
+                    <td>@key</td>
+                    <td>@compare_product.Product.Name</td>
+                    <td>@Html.Raw(@compare_product.Product.Description)</td>
+                    <td>@compare_product.Product.Price.ToString("#,##0 VNĐ")</td>
+                    <td> <img src="~/media/products/@compare_product.Product.Image" width="120px" height="150px" /> </td>
+                    <td><a class="btn btn-danger btn-sm confirmDeletion" asp-action="DeleteCompare" asp-controller="Home" asp-route-Id="@compare_product.Compares.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+</html>
+ *@
+ @model Shopping_Tutorial.Models.ViewModels.CompareViewModel
+@{
+    ViewBag.Title = "So sánh sản phẩm";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="container mt-4">
+    <h2 class="mb-4">🆚 So sánh sản phẩm</h2>
+
+    <form asp-action="Compare" method="post" class="row g-3">
+        <div class="col-md-6">
+            <label for="product1" class="form-label">Chọn sản phẩm 1:</label>
+            <select asp-for="ProductId1" asp-items="Model.Products" class="form-select" id="product1"></select>
+        </div>
+        <div class="col-md-6">
+            <label for="product2" class="form-label">Chọn sản phẩm 2:</label>
+            <select asp-for="ProductId2" asp-items="Model.Products" class="form-select" id="product2"></select>
+        </div>
+
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">So sánh</button>
+        </div>
+    </form>
+
+    @if (Model.Result != null)
+    {
+        <div class="alert alert-info mt-4">
+            <strong>Kết quả:</strong>
+            <div>
+
+                @{
+                    var compareResults = ViewBag.CompareResults as Dictionary<string, Dictionary<string, string>>;
+                }
+
+                @if (compareResults != null)
+                {
+                    foreach (var category in compareResults)
+                    {
+                        <p>@category.Value.Values.FirstOrDefault()</p>
+                    }
+                }
+            </div>
+        </div>
+    }
+
+    @if (ViewBag.Product1 != null && ViewBag.Product2 != null)
+    {
+        var prod1 = (Shopping_Tutorial.Models.ProductModel)ViewBag.Product1;
+        var prod2 = (Shopping_Tutorial.Models.ProductModel)ViewBag.Product2;
+
+        <h3 class="mt-5"> Bảng so sánh chi tiết</h3>
+        <table class="table table-bordered text-center mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Thông số</th>
+                    <th>@prod1.Name</th>
+                    <th>@prod2.Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Giá</td><td>@String.Format("{0:N0}₫", prod1.Price)</td><td>@String.Format("{0:N0}₫", prod2.Price)</td></tr>
+                <tr><td>RAM</td><td>@prod1.ThongSoKyThuat?.RAM</td><td>@prod2.ThongSoKyThuat?.RAM</td></tr>
+                <tr><td>Pin</td><td>@prod1.ThongSoKyThuat?.Pin</td><td>@prod2.ThongSoKyThuat?.Pin</td></tr>
+                <tr><td>Camera</td><td>@prod1.ThongSoKyThuat?.Camera</td><td>@prod2.ThongSoKyThuat?.Camera</td></tr>
+                <tr><td>Chip</td><td>@prod1.ThongSoKyThuat?.Chip</td><td>@prod2.ThongSoKyThuat?.Chip</td></tr>
+                <tr><td>CPU</td><td>@prod1.ThongSoKyThuat?.CPU</td><td>@prod2.ThongSoKyThuat?.CPU</td></tr>
+                <tr><td>Màn hình</td><td>@prod1.ThongSoKyThuat?.Screen</td><td>@prod2.ThongSoKyThuat?.Screen</td></tr>
+            </tbody>
+        </table>
+    }
+</div>
+<script>
+    let category1 = null;
+    let category2 = null;
+
+    // When product 1 is selected -> Save categoryId
+    $('#product1').on('change', function () {
+        const id1 = $(this).val();
+        if (id1) {
+            $.get('/Home/GetCategoryId', { productId: id1 }, function (data) {
+                category1 = data;
+            });
+        }
+    });
+
+    // When product 2 is selected -> Save categoryId and compare category
+    $('#product2').on('change', function () {
+        const id2 = $(this).val();
+        if (id2 && category1 !== null) {
+            $.get('/Home/GetCategoryId', { productId: id2 }, function (data) {
+                category2 = data;
+                if (category1 !== category2) {
+                    alert("⚠️ Hai sản phẩm không cùng loại, vui lòng chọn lại!");
+                    $('#product2').val(""); // Reset dropdown
+                }
+            });
+        }
+    });
+
+    // Check when "So sánh" is clicked without selecting enough products
+    $('form').on('submit', function (event) {
+        const product1 = $('#product1').val();
+        const product2 = $('#product2').val();
+
+        if (!product1 || !product2) {
+            event.preventDefault(); // Stop form submission
+            alert("⚠️ Bạn cần chọn đủ 2 sản phẩm để so sánh!");
+        } else if (product1 === product2) {
+            event.preventDefault(); // Stop form submission
+            alert("⚠️ Bạn không thể chọn cùng một sản phẩm để so sánh!");
+        } else if (category1 !== null && category2 !== null && category1 !== category2) {
+            event.preventDefault(); // Stop form submission
+            alert("⚠️ Hai sản phẩm không cùng loại, vui lòng chọn lại!");
+        }
+    });
+</script>

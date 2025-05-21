@@ -1,0 +1,55 @@
+﻿@model Shopping_Tutorial.Models.ThongSoKyThuatModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông số";
+}
+
+<h3>Chỉnh sửa Thông số</h3>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Sản phẩm</label>
+        <select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductList">
+            <option value="">-- Chọn sản phẩm --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Camera</label>
+        <input asp-for="Camera" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>CPU</label>
+        <input asp-for="CPU" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>RAM</label>
+        <input asp-for="RAM" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Chip</label>
+        <input asp-for="Chip" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Pin</label>
+        <input asp-for="Pin" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Màn hình</label>
+        <input asp-for="Screen" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Lưu thay đổi</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Quay lại</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

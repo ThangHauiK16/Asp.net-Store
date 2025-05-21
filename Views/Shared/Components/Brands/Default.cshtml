@@ -1,0 +1,83 @@
+﻿@* @model IEnumerable<BrandModel>;
+<style>
+	.panel-default > .panel-heading {
+		color: #333;
+		background-color: currentcolor;
+		border-color: #ddd;
+	}
+</style>
+@foreach (var item in Model)
+{
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title"><a asp-action="Index" asp-controller="Brand" asp-route-Slug="@item.Slug">@item.Name</a></h4>
+		</div>
+	</div>
+} *@
+
+ @model IEnumerable<BrandModel>
+
+<style>
+    .panel-default > .panel-heading {
+        color: #333;
+        background-color: currentcolor;
+        border-color: #ddd;
+    }
+
+    .brand-item {
+        display: none;
+    }
+
+        .brand-item.show {
+            display: block;
+        }
+</style>
+
+<div id="brandList">
+    @{
+        int index = 0;
+        foreach (var item in Model)
+        {
+            <div class="panel panel-default brand-item" data-index="@index">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a asp-action="Index" asp-controller="Brand" asp-route-Slug="@item.Slug">@item.Name</a>
+                    </h4>
+                </div>
+            </div>
+            index++;
+        }
+    }
+</div>
+
+@if (Model.Count() > 5)
+{
+    <button id="loadBrandBtn" class="btn btn-primary">Xem thêm</button>
+}
+<script>
+    let brandCurrentPage = 0;
+    const brandStep = 5;
+    const brandTotalCount = @Model.Count();
+    const brandTotalPages = Math.ceil(brandTotalCount / brandStep);
+
+    function showBrandPage(pageIndex) {
+        const items = document.querySelectorAll('.brand-item');
+        items.forEach((item, i) => {
+            item.classList.remove('show');
+            if (i >= pageIndex * brandStep && i < (pageIndex + 1) * brandStep) {
+                item.classList.add('show');
+            }
+        });
+    }
+
+    document.getElementById("loadBrandBtn").onclick = function () {
+        brandCurrentPage++;
+        if (brandCurrentPage >= brandTotalPages) {
+            brandCurrentPage = 0;
+        }
+        showBrandPage(brandCurrentPage);
+    };
+
+    showBrandPage(0);
+</script>
+

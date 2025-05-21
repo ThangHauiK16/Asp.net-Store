@@ -1,0 +1,328 @@
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["Title"] = "Web bán hàng ASP.NET8";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+	}
+ <style >
+	/* Sản phẩm */
+	.single-products {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 450px; /* Đảm bảo chiều cao tối thiểu */
+		padding: 10px;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+		margin-bottom: 20px;
+	}
+
+	/* Nút thêm giỏ hàng */
+	.add-to-cart {
+		width: 100%;
+		background: linear-gradient(45deg, #28a745, #218838);
+		color: #fff;
+		border: none;
+		margin-top: 10px;
+		padding: 10px 20px;
+		border-radius: 50px;
+		font-weight: bold;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in-out;
+	}
+
+		.add-to-cart:hover {
+			background: linear-gradient(45deg, #218838, #1e7e34);
+			transform: scale(1.05);
+		}
+
+	/* Phần .choose chứa 2 nút dưới */
+	
+	.choose {
+		margin-top: 10px;
+		width: 100%;
+	}
+
+		.choose ul {
+			display: flex;
+			gap: 10px;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			justify-content: space-between;
+		}
+
+		/* Mỗi nút chiếm 50% */
+		.choose li {
+			flex: 1;
+		}
+
+		/* Nút Yêu thích & So sánh */
+		.choose .btn {
+			width: 100%;
+			padding: 10px 0;
+			font-size: 14px;
+			border-radius: 50px;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 5px;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+			transition: all 0.3s ease-in-out;
+			height: 42px; /* Chiều cao bằng nhau */
+		}
+
+	/* Yêu thích */
+	.add-btn-wishlist {
+		background: linear-gradient(45deg, #ff416c, #ff4b2b);
+		color: #fff;
+		border: none;
+	}
+
+		.add-btn-wishlist:hover {
+			background: linear-gradient(45deg, #ff2b5e, #ff1e00);
+			transform: scale(1.05);
+		}
+
+	/* So sánh */
+	.add-btn-compare {
+		background: linear-gradient(45deg, #1e90ff, #007bff);
+		color: #fff;
+		border: none;
+	}
+
+		.add-btn-compare:hover {
+			background: linear-gradient(45deg, #007bff, #0056b3);
+			transform: scale(1.05);
+		}
+
+</style> 
+<partial name="_SliderPartial"  />
+<div class="col-sm-3">
+	<partial name="_SidebarPartial" />
+</div>	
+
+<div class="col-sm-9 padding-right">
+	<div class="features_items">
+		<!--features_items-->
+		<h2 class="title text-center">Sản phẩm mới nhất</h2>
+
+		@foreach (var item in Model)
+		{
+
+			<div class="col-sm-4">
+				<div class="product-image-wrapper">
+					<div class="single-products">
+						<div class="productinfo text-center">
+							<a asp-action="Detail" asp-controller="Product" asp-route-Id="@item.Id">
+							<img src="~/media/products/@item.Image" alt="@item.Name" width="100px" height="200px" />
+								<h2>@item.Price.ToString("#,##0 VNĐ")</h2>
+							<p>@item.Name</p>
+							<p>Danh mục: @item.Category.Name</p>
+							<p>Thương hiệu: @item.Brand.Name</p>
+							</a>
+							@* <a asp-action="Add" asp-controller="Cart" asp-route-Id="@item.Id" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> *@
+							@if(item.Quantity>0){
+								<button class="btn btn-default add-to-cart" data-product_id="@item.Id"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</button>
+							}
+							else
+							{
+								<button class="btn btn-default"><i class="fa fa-shopping-cart"></i>Hết hàng</button>
+							}
+						</div>
+						
+
+					</div>
+					<div class="choose">
+						@if (User.Identity?.IsAuthenticated ?? false)
+						{
+							<ul class="nav nav-pills nav-justified">
+								<li>
+									<button class="btn add-btn-wishlist" data-product_id="@item.Id">
+										<i class="fa fa-heart"></i> Yêu thích
+									</button>
+								</li>
+								<li>
+									<button class="btn add-btn-compare" data-product_id="@item.Id" data-product_name="@item.Name">
+										<i class="fa fa-exchange-alt"></i> So sánh
+									</button>
+								</li>
+							</ul>
+						}
+					</div>
+
+				</div>
+			</div>
+		}
+		<div class="text-center mt-4">
+			<ul class="pagination justify-content-center">
+				@if (ViewBag.CurrentPage > 1)
+				{
+					<li class="page-item">
+						<a class="page-link" asp-controller="Home" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage - 1)">Trước</a>
+					</li>
+				}
+
+				@for (int i = 1; i <= ViewBag.TotalPages; i++)
+				{
+					<li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+						<a class="page-link" asp-controller="Home" asp-action="Index" asp-route-page="@i">@i</a>
+					</li>
+				}
+
+				@if (ViewBag.CurrentPage < ViewBag.TotalPages)
+				{
+					<li class="page-item">
+						<a class="page-link" asp-controller="Home" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage + 1)">Sau</a>
+					</li>
+				}
+			</ul>
+		</div>
+
+
+	</div><!--features_items-->
+</div>
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			$('.add-to-cart').click(function () {
+				var Id = $(this).data("product_id");
+
+				//alert(product_id);
+
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("Add","Cart")",
+					data: { Id: Id }, // Send data to the server
+
+					success: function (result) {
+						// Handle successful update
+						if (result) {
+
+							Swal.fire("Thêm giỏ hàng thành công.");
+						} 
+					}
+
+				});
+			});
+		
+		let comparedProducts = [];
+		let comparedNames = [];
+		let comparedCategory = null;
+
+		$('.add-btn-compare').click(function () {
+			const productId = $(this).data('product_id');
+			const productName = $(this).data('product_name');
+
+			if (comparedProducts.length < 2) {
+				if (!comparedProducts.includes(productId)) {
+					$.get('/Home/GetCategoryId', { productId: productId }, function (category) {
+						if (comparedProducts.length === 0) {
+							comparedProducts.push(productId);
+							comparedNames.push(productName);
+							comparedCategory = category;
+
+							localStorage.setItem("comparedProducts", JSON.stringify(comparedProducts));
+							localStorage.setItem("comparedNames", JSON.stringify(comparedNames));
+							localStorage.setItem("comparedCategory", comparedCategory);
+
+							Swal.fire({
+								title: `Đã thêm sản phẩm "${productName}" vào so sánh!`,
+								icon: 'success'
+							});
+						} else {
+							if (category === comparedCategory) {
+								comparedProducts.push(productId);
+								comparedNames.push(productName);
+
+								localStorage.setItem("comparedProducts", JSON.stringify(comparedProducts));
+								localStorage.setItem("comparedNames", JSON.stringify(comparedNames));
+
+								Swal.fire({
+									title: `Đã thêm sản phẩm "${productName}" vào so sánh!`,
+									icon: 'success'
+								});
+
+								if (comparedProducts.length === 2) {
+									// Redirect with product IDs
+									window.location.href = `/Home/Compare?productId1=${comparedProducts[0]}&productName1=${comparedNames[0]}&productId2=${comparedProducts[1]}&productName2=${comparedNames[1]}`;
+								}
+							} else {
+								Swal.fire({
+									title: 'Sản phẩm không cùng loại!',
+									text: 'Vui lòng chọn sản phẩm cùng loại để so sánh.',
+									icon: 'warning'
+								});
+							}
+						}
+					});
+				} else {
+					Swal.fire({
+						title: 'Sản phẩm đã được chọn!',
+						icon: 'info'
+					});
+				}
+			} else {
+				// Redirect with product IDs
+				window.location.href = `/Home/Compare?productId1=${comparedProducts[0]}&productName1=${comparedNames[0]}&productId2=${comparedProducts[1]}&productName2=${comparedNames[1]}`;
+			}
+		});
+				});
+	</script>
+	<!---Add to Wishlish Script--->
+	<script>
+		$(document).ready(function () {
+			$('.add-btn-wishlist').click(function () {
+				var Id = $(this).data("product_id");
+
+				//alert(product_id);
+
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("AddWishlist", "Home")",
+					data: { Id: Id }, // Send data to the server
+
+					success: function (result) {
+						// Handle successful update
+						if (result) {
+
+							Swal.fire("Thêm yêu thích sản phẩm thành công.");
+						}
+					}
+
+				});
+			});
+		});
+	</script>
+	<!---//Add to Wishlish Script--->
+	<!---Add to Wishlish Script--->
+	@* <script>
+		$(document).ready(function () {
+			$('.add-btn-compare').click(function () {
+				var Id = $(this).data("product_id");
+
+				//alert(product_id);
+
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("AddCompare", "Home")",
+					data: { Id: Id }, // Send data to the server
+
+					success: function (result) {
+						// Handle successful update
+						if (result) {
+
+							Swal.fire("Thêm so sánh thành công.");
+						}
+					}
+
+				});
+			});
+		});
+	</script> *@
+	
+	<!---//Add to Wishlish Script--->
+}
+

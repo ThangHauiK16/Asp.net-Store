@@ -1,0 +1,401 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Shopping_Tutorial.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Shopping_Tutorial.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\backend\\images\\ASP.Net Store.png",
+      "PackagePath": "staticwebassets\\backend\\images\\ASP.Net Store.png"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\backend\\js\\site.js",
+      "PackagePath": "staticwebassets\\backend\\js\\site.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\prettyPhoto.css",
+      "PackagePath": "staticwebassets\\css\\prettyPhoto.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\price-range.css",
+      "PackagePath": "staticwebassets\\css\\price-range.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\contact.js",
+      "PackagePath": "staticwebassets\\js\\contact.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\gmaps.js",
+      "PackagePath": "staticwebassets\\js\\gmaps.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\html5shiv.js",
+      "PackagePath": "staticwebassets\\js\\html5shiv.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\jquery.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\jquery.prettyPhoto.js",
+      "PackagePath": "staticwebassets\\js\\jquery.prettyPhoto.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\js\\price-range.js",
+      "PackagePath": "staticwebassets\\js\\price-range.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\logo\\42149eba-ae18-4c9d-92de-4bc23b544b9e_ASP.Net Store.png",
+      "PackagePath": "staticwebassets\\media\\logo\\42149eba-ae18-4c9d-92de-4bc23b544b9e_ASP.Net Store.png"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\logo\\43f1f5c6-83a1-424b-ad70-057dcb96e2a0_images.png",
+      "PackagePath": "staticwebassets\\media\\logo\\43f1f5c6-83a1-424b-ad70-057dcb96e2a0_images.png"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\0e7947a6-4a97-4e4b-b967-7ff58335507f_55781_laptop_asus_tuf_gaming_a15_fa507nur_7.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\0e7947a6-4a97-4e4b-b967-7ff58335507f_55781_laptop_asus_tuf_gaming_a15_fa507nur_7.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\373cd6d7-c0e8-4071-ba56-c00f1e1020e4_20221017_Ran3MlSjCR1jmfIPtNisw1Bq.png",
+      "PackagePath": "staticwebassets\\media\\products\\373cd6d7-c0e8-4071-ba56-c00f1e1020e4_20221017_Ran3MlSjCR1jmfIPtNisw1Bq.png"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\58026406-da00-4f33-9fc6-24ca07b0a309_9654904.png",
+      "PackagePath": "staticwebassets\\media\\products\\58026406-da00-4f33-9fc6-24ca07b0a309_9654904.png"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\7007d0ec-f9f3-45b9-879e-99346a88e3fc_18559-asus-rog-strix-g17-g713qr-hg072t-4.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\7007d0ec-f9f3-45b9-879e-99346a88e3fc_18559-asus-rog-strix-g17-g713qr-hg072t-4.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\792ff6f8-7678-4c84-990e-976250e9edf8_Iphone12.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\792ff6f8-7678-4c84-990e-976250e9edf8_Iphone12.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\8bbc14f8-1046-4bad-991d-2366ebdb6093_0e7947a6-4a97-4e4b-b967-7ff58335507f_55781_laptop_asus_tuf_gaming_a15_fa507nur_7.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\8bbc14f8-1046-4bad-991d-2366ebdb6093_0e7947a6-4a97-4e4b-b967-7ff58335507f_55781_laptop_asus_tuf_gaming_a15_fa507nur_7.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\8bc77cf7-af58-4596-be6a-18c10b17163a_44171_dell_gaming_g3_3500_ha1.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\8bc77cf7-af58-4596-be6a-18c10b17163a_44171_dell_gaming_g3_3500_ha1.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\ac32c41c-3859-49d1-aa95-d0d8ed4a79f1_Iphone16.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\ac32c41c-3859-49d1-aa95-d0d8ed4a79f1_Iphone16.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\dac5bcf6-dae1-4ba3-b3ee-a7c257ea0742_macbook-pro-spacegray-m1-2020-300x250.jpeg",
+      "PackagePath": "staticwebassets\\media\\products\\dac5bcf6-dae1-4ba3-b3ee-a7c257ea0742_macbook-pro-spacegray-m1-2020-300x250.jpeg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\products\\fe30f134-a6a4-480d-be94-6363fc8f7181_7007d0ec-f9f3-45b9-879e-99346a88e3fc_18559-asus-rog-strix-g17-g713qr-hg072t-4.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\fe30f134-a6a4-480d-be94-6363fc8f7181_7007d0ec-f9f3-45b9-879e-99346a88e3fc_18559-asus-rog-strix-g17-g713qr-hg072t-4.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\sliders\\12cf9a46-f799-4c15-8754-53bcf09e6e34_2642_ldp_bmwk_1920x620.png",
+      "PackagePath": "staticwebassets\\media\\sliders\\12cf9a46-f799-4c15-8754-53bcf09e6e34_2642_ldp_bmwk_1920x620.png"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\sliders\\4a8e957c-2447-49cf-9a76-fa8a9ec2d048_cong nghe.jpg",
+      "PackagePath": "staticwebassets\\media\\sliders\\4a8e957c-2447-49cf-9a76-fa8a9ec2d048_cong nghe.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\sliders\\4f4b0902-0520-4d26-bf26-3e58ab13548f_banner-n04.jpg",
+      "PackagePath": "staticwebassets\\media\\sliders\\4f4b0902-0520-4d26-bf26-3e58ab13548f_banner-n04.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\sliders\\b99d3b98-7a46-41f7-924c-7a9fee047fab_Black-Myth-Wukong_2024_06-07-24_005.jpg",
+      "PackagePath": "staticwebassets\\media\\sliders\\b99d3b98-7a46-41f7-924c-7a9fee047fab_Black-Myth-Wukong_2024_06-07-24_005.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\sliders\\c76c3ee5-1cce-4fe1-8576-923ed5ae0233_Black-Myth-Wukong-banner.jpg",
+      "PackagePath": "staticwebassets\\media\\sliders\\c76c3ee5-1cce-4fe1-8576-923ed5ae0233_Black-Myth-Wukong-banner.jpg"
+    },
+    {
+      "Id": "C:\\ASP_NET\\Shopping_Tutorial\\wwwroot\\media\\sliders\\ed95d604-fcff-42b1-9c5a-26bd18331d6d_perspective-laptop-position-with-business-analysis-vector-38004031.jpg",
+      "PackagePath": "staticwebassets\\media\\sliders\\ed95d604-fcff-42b1-9c5a-26bd18331d6d_perspective-laptop-position-with-business-analysis-vector-38004031.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Shopping_Tutorial.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Shopping_Tutorial.props",
+      "PackagePath": "build\\Shopping_Tutorial.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Shopping_Tutorial.props",
+      "PackagePath": "buildMultiTargeting\\Shopping_Tutorial.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Shopping_Tutorial.props",
+      "PackagePath": "buildTransitive\\Shopping_Tutorial.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

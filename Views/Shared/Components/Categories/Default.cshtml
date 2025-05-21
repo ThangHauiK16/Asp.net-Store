@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CategoryModel>
+
+
+ @* @foreach (var item in Model)
+		{
+					<div class="panel panel-default category-item">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a asp-action="Index" asp-controller="Category" asp-route-Slug="@item.Slug">@item.Name</a>
+							</h4>
+						</div>
+					</div>
+		} *@
+	 
+
+ <style>
+   
+    .category-item {
+        display: none;
+    }
+
+        .category-item.show {
+            display: block;
+        }
+</style>
+
+<div id="categoryList">
+    @{
+        int index = 0;
+        foreach (var item in Model)
+        {
+            <div class="panel panel-default category-item" data-index="@index">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a asp-action="Index" asp-controller="Category" asp-route-Slug="@item.Slug">@item.Name</a>
+                    </h4>
+                </div>
+            </div>
+            index++;
+        }
+    }
+</div>
+
+@if (Model.Count() > 5)
+{
+    <button id="loadCategoryBtn" class="btn btn-primary">Xem thêm</button>
+}
+<script>
+    let categoryCurrentPage = 0;
+    const categoryStep = 5;
+    const categoryTotalCount = @Model.Count();
+    const categoryTotalPages = Math.ceil(categoryTotalCount / categoryStep);
+
+    function showCategoryPage(pageIndex) {
+        const items = document.querySelectorAll('.category-item');
+        items.forEach((item, i) => {
+            item.classList.remove('show');
+            if (i >= pageIndex * categoryStep && i < (pageIndex + 1) * categoryStep) {
+                item.classList.add('show');
+            }
+        });
+    }
+
+    document.getElementById("loadCategoryBtn").onclick = function () {
+        categoryCurrentPage++;
+        if (categoryCurrentPage >= categoryTotalPages) {
+            categoryCurrentPage = 0;
+        }
+        showCategoryPage(categoryCurrentPage);
+    };
+
+    showCategoryPage(0);
+</script>
+
+ 

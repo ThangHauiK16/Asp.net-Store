@@ -1,0 +1,165 @@
+﻿@model ProductWarrantyModel
+@{
+    ViewData["title"] = "Create Warranty";
+    var products = ViewBag.Products as List<ProductModel>;
+    var warrantyProducts = ViewBag.ProductWarranty as List<ProductWarrantyModel>;
+    // var total_quantities = 0;
+    // var key = 1;
+}
+
+
+<h3>Create Warranty</h3>
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"]
+    </div>
+}
+<div class="col-md-9">
+    <form asp-action="StoreProductWarranty" asp-controller="User">
+        <!-- Hidden field for Product ID -->
+        <input type="hidden" name="UserId" value="@ViewBag.UserId" />
+
+        <!-- Validation summary for displaying errors -->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <!-- Description field -->
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <input asp-for="Description" id="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="ProductId">Select Product:</label>
+            <select name="ProductId" id="ProductId" class="form-control" required>
+                <option value="">-- Choose a Product --</option>
+                @foreach (var product in products)
+                {
+                    <option value="@product.Id">@product.Name</option>
+                }
+            </select>
+        </div>
+
+       
+
+        <!-- Date Start field -->
+        <div class="form-group">
+            <label for="DateStart">Date Start</label>
+            <input asp-for="DateStart" id="DateStart" type="date" class="form-control" />
+            <span asp-validation-for="DateStart" class="text-danger"></span>
+        </div>
+
+        <!-- Date Expired field -->
+        <div class="form-group">
+            <label for="DateExpired">Date Expired</label>
+            <input asp-for="DateExpired" id="DateExpired" type="date" class="form-control" />
+            <span asp-validation-for="DateExpired" class="text-danger"></span>
+        </div>
+
+        <!-- Status dropdown -->
+        <div class="form-group">
+            <label for="Status">Status</label>
+            <select asp-for="Status" id="Status" class="form-control">
+                <option value="1">Hiển thị</option>
+                <option value="0">Ẩn</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+    <h3>Existing Product Warranties:</h3>
+    @if (warrantyProducts != null && warrantyProducts.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Date Start</th>
+                    <th>Date Expired</th>
+                    <th>Status</th>
+                    <th>Expired</th>
+                    <th>Manage</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var warranty in warrantyProducts)
+                {
+                    <tr>
+                        <td>@warranty.Id</td>
+                        <td>@warranty.Product.Name</td>
+                        <td>@warranty.Description</td>
+                        <td>@warranty.DateStart.ToShortDateString()</td>
+                        <td>@warranty.DateExpired.ToShortDateString()</td>
+                        <td>
+                            @if (warranty.Status == 1)
+                            {
+                                <span class="badge bg-success">Active</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">InActive</span>
+                            }
+                        </td>
+                        <td>
+                            @if (warranty.DateExpired < DateTime.Now)
+                            {
+                                <span class="text text-danger">Expired</span>
+                            }
+                            else
+                            {
+                                TimeSpan remainingTime = warranty.DateExpired - DateTime.Now; //6 ngày
+                                int daysRemaining = remainingTime.Days;
+                                @if (daysRemaining == 0)
+                                {
+                                    <span class="text text-danger">Today</span>
+                                }
+                                else
+                                {
+                                    <span class="text text-success">@daysRemaining days left</span>
+                                }
+
+                            }
+                        </td>
+                        <td>
+                            <!-- Delete button -->
+                            <form asp-action="DeleteWarranty" asp-controller="User" asp-route-Id="@warranty.Id" onsubmit="return confirm('Are you sure you want to delete this warranty?');">
+                               
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                            <form asp-action="UpdateStatus" asp-controller="User" asp-route-Id="@warranty.Id" class="d-inline">
+                               
+                                @if (warranty.Status == 1)
+                                {
+                                    <button type="submit" class="btn btn-warning btn-sm">Deactivate</button>
+                                }
+                                else
+                                {
+                                    <button type="submit" class="btn btn-success btn-sm">Activate</button>
+                                }
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No warranty products found for this user.</p>
+    }
+    <a asp-asp-controller="Product" asp-action="Index">Back to list users</a>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
