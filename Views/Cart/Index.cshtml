@@ -326,7 +326,7 @@
 										}
 										<form method="POST" asp-action="CreatePaymentUrl" asp-controller="Payment">
 											<input type="hidden" name="FullName" value="@User.Identity.Name" />
-											<input type="hidden" name="Amount" value="@Model.GrandTotal" />
+											<input type="hidden" name="Amount" value="@(total + Model.ShippingCost)" />
 
 											<input type="hidden" name="OrderInfo" value="Thanh toán đặt hàng qua Momo tại ShopASP.Net" />
 
@@ -336,7 +336,7 @@
 										</form>
 												<form method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment">
 													<input type="hidden" name="Name" value="@User.Identity.Name" />
-													<input type="hidden" name="Amount" value="@Model.GrandTotal" />
+													<input type="hidden" name="Amount" value="@(total + Model.ShippingCost)" />
 													<input type="hidden" name="OrderType" value="order" />
 
 															<input type="hidden" name="OrderDescription" value="Thanh toán đặt hàng qua Vnpay tại ShopASP.Net" />
